@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#f0f0f0"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="#ffffff"
+        android:layout_margin="16dp"
+        android:elevation="4dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Loan Approval Prediction"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center" />
+
+        <!-- Applicant Age -->
+        <TextView
+            android:id="@+id/label_applicant_age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Applicant Age"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/person_age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/label_applicant_age"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Annual Income -->
+        <TextView
+            android:id="@+id/label_annual_income"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Annual Income (Monetary Units)"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/person_age"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/person_income"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/label_annual_income"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Employment Length -->
+        <TextView
+            android:id="@+id/label_employment_years"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Employment Length (Years)"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/person_income"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/person_emp_length"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/label_employment_years"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Loan Amount Requested -->
+        <TextView
+            android:id="@+id/label_loan_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Loan Amount Requested"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/person_emp_length"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/loan_amnt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/label_loan_amount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Loan Interest Rate -->
+        <TextView
+            android:id="@+id/label_interest_rate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Loan Interest Rate (%)"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/loan_amnt"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/loan_int_rate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/label_interest_rate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Loan Repayment as % of Income -->
+        <TextView
+            android:id="@+id/label_loan_repayment_income"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Loan Repayment as % of Income"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/loan_int_rate"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/loan_repayment_income"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/label_loan_repayment_income"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Credit History Length (Years) -->
+        <TextView
+            android:id="@+id/label_credit_history_length"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Credit History Length (Years)"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/loan_repayment_income"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/credit_history_length"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/label_credit_history_length"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Home Ownership Status -->
+        <TextView
+            android:id="@+id/label_home_ownership_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Home Ownership Status"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/credit_history_length"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_home_ownership_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/label_home_ownership_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Loan Credit Grade -->
+        <TextView
+            android:id="@+id/label_credit_grade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Loan Credit Grade"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/spinner_home_ownership_status"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_credit_grade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/label_credit_grade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Default History on File -->
+        <TextView
+            android:id="@+id/label_default_history"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Default History on File"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/spinner_credit_grade"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_default_history"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/label_default_history"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Loan Purpose/Intent -->
+        <TextView
+            android:id="@+id/label_loan_purpose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Loan Purpose/Intent"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/spinner_default_history"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_loan_purpose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/label_loan_purpose"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/predict_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Predict"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF5722"
+            android:padding="12dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/spinner_loan_purpose"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
