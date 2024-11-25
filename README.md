@@ -65,7 +65,6 @@ Input: JSON payload containing user data fields:
 ### Example Response:
 {
     "status": "Approved",
-    "confidence": 0.92
 }
 
 ## 7. Results
